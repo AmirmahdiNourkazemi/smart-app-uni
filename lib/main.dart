@@ -1,3 +1,6 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smartfunding/bloc/auth/check_login/login_bloc.dart';
@@ -6,14 +9,18 @@ import 'package:smartfunding/di/di.dart';
 import 'constant/color.dart';
 import 'constant/scheme.dart';
 import 'constant/text_theme.dart';
-import 'firebase_options.dart';
 import 'screens/auth_screen/login_screen.dart';
 import 'screens/dashboard_screen.dart';
 import 'utils/auth_manager.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   await getItInit();
   await locator<AuthMnager>().loadRefralCode();
   await locator<AuthMnager>().loadToken();

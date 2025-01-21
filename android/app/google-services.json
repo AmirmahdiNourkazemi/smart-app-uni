@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "166323681079",
-    "project_id": "smartfunding-7654c",
-    "storage_bucket": "smartfunding-7654c.appspot.com"
+    "project_number": "445344254777",
+    "project_id": "uni-fund",
+    "storage_bucket": "uni-fund.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:166323681079:android:fa43c3138ccf507e194cb2",
+        "mobilesdk_app_id": "1:445344254777:android:c8df0b70c263f322c4b6e8",
         "android_client_info": {
-          "package_name": "ir.smartfunding"
+          "package_name": "uni.smartfunding"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBmSK9xyIJnPDAF2T1oZo0HSiZbYsDAtIk"
+          "current_key": "AIzaSyCSoTs8MmiByuD8g9bqlHQ63hxjIVC3o_I"
         }
       ],
       "services": {
